@@ -2,9 +2,13 @@
   "name": "api-esp-comm",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.ts"
+    "dev": "tsx watch server.ts",
+    "build": "tsup server.ts",
+    "start": "node dist/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,12 +18,13 @@
     "@prisma/client": "^6.8.2",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
     "@types/express": "^5.0.2",
     "@types/node": "^22.15.24",
-    "prisma": "^6.8.2"
+    "prisma": "^6.8.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.19.4"
   }
 }
